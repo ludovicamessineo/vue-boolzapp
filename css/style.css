@@ -16,45 +16,123 @@ body {
         #dadbd3 100%
     );
     overflow: hidden;
-    font-family: 'Lato', sans-serif;;
+    font-family: 'Lato', sans-serif;
+    font-size: .8rem;
+
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     width: 80%;
     min-width: 500px;
-    height: 90%;
     margin: auto;
     display: flex;
     background-color: #eaeaea;
+    /* Test */
+    height: 500px;
+    margin-top: 1rem;
 }
 
 /* PARTE SINISTRA */
+
+/* Header */
 .left-app {
-    width: 40%;
+    width: 30%;
     border-right: 1px solid #e1e1e1;
 }
 
-.header-left {
+.header-left, .header-right {
     display: flex;
     align-items: center;
     padding: .6rem;
 }
 
-.header-avatar {
+.header-left-avatar,
+.header-right-avatar {
     display: flex;
     align-items: center;
 }
 
-.header-avatar > img {
-    width: 15%;
+.header-left-avatar > img {
+    width: 20%;
     border-radius: 50%;
+    margin-right: .4rem;
 }
 
-.header-icons {
+.header-left-icons,
+.header-right-icons {
     display: flex;
     color: #b1b1b1;
+    font-size: 1rem;
 }
 
-.header-icons > i {
+.header-left-icons > i,
+.header-right-icons > i {
     padding-right: .5rem;
+}
+
+/* Barra notifiche */
+.msg-notification {
+    background-color: #8edafd;
+    display: flex;
+    align-items: center;
+}
+
+.msg-icon > i {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: white;
+    color: #8edafd;
+    border-radius: 50%;
+    margin: .8rem;
+    font-size: .9rem;
+}
+
+.msg-text > p:nth-child(2) {
+    font-size: .7rem;
+    text-decoration: underline;
+    color: #6da4be;
+}
+
+/* Ricerca */
+.chat-search {
+    display: flex;
+    background-color: white;
+    margin: .3rem;
+    padding: .5rem;
+    color: gray;
+}
+
+.chat-search > i {
+    padding: .2rem .9rem;
+}
+
+.chat-search > input {
+    width: 100%;
+    border: transparent;
+}
+
+.chat-search > input:focus {
+    border: 1px solid transparent;
+}
+
+/* PARTE DESTRA */
+.right-app {
+    width: 70%;
+}
+/* Header */
+.header-right {
+    justify-content: space-between;
+}
+
+.header-right-avatar > img {
+    width: 20%;
 }

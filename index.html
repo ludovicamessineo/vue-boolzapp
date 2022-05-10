@@ -21,26 +21,61 @@
 </head>
 <body>
 
-    <div class="container">
-        <!-- PARTE SINISTRA  -->
-        <div class="left-app">
-            <div class="header-left">
-                <div class="header-avatar">
-                    <img src="img/avatar_io.jpg" alt="">
-                    <p>Sofia</p>
+    <div id="root">
+
+        <div class="container">
+            <!-- PARTE SINISTRA  -->
+            <div class="left-app">
+                <!-- HEADER SX -->
+                <div class="header-left">
+                    <div class="header-left-avatar">
+                        <img src="img/avatar_io.jpg" alt="">
+                        <p>Sofia</p>
+                    </div>
+                    <div class="header-left-icons">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
                 </div>
-                <div class="header-icons">
-                    <i class="fas fa-circle-notch"></i>
-                    <i class="fas fa-comment-alt"></i>
-                    <i class="fas fa-ellipsis-v"></i>
+                <!-- /HEADER SX -->
+    
+                <!-- NOTIFICHE E RICERCA -->
+                <div class="msg-notification">
+                    <div class="msg-icon">
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+                    <div class="msg-text">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <p>Attiva notifiche desktop</p>
+                    </div>
+                </div>
+    
+                <div class="chat-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                </div>
+                <!-- /NOTIFICHE E RICERCA -->
+    
+    
+            </div>
+            <!-- /PARTE SINISTRA  -->
+    
+            <div class="right-app">
+                <div class="header-right">
+                    <div class="header-right-avatar">
+                        <img src="img/avatar_1.jpg" alt="">
+                        <p>Michele</p>
+                    </div>
+                    <div class="header-right-icons">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- /PARTE SINISTRA  -->
 
-        <div class="right-app">
-
-        </div>
     </div>
 
     <script src="js/script.js" type="text/javscript"></script>
