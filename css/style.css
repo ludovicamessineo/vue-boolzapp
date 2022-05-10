@@ -5,6 +5,56 @@
     box-sizing: border-box;
 }
 
+/* COMMON */
 body {
-    background-color: aqua;
+    height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #009688 0%,
+        #009688 15%,
+        #dadbd3 15%,
+        #dadbd3 100%
+    );
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;;
+}
+
+.container {
+    width: 80%;
+    min-width: 500px;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    background-color: #eaeaea;
+}
+
+/* PARTE SINISTRA */
+.left-app {
+    width: 40%;
+    border-right: 1px solid #e1e1e1;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    padding: .6rem;
+}
+
+.header-avatar {
+    display: flex;
+    align-items: center;
+}
+
+.header-avatar > img {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.header-icons {
+    display: flex;
+    color: #b1b1b1;
+}
+
+.header-icons > i {
+    padding-right: .5rem;
 }
