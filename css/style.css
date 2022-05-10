@@ -43,6 +43,7 @@ body {
 /* Header */
 .left-app {
     width: 30%;
+    min-width: 250px;
     border-right: 1px solid #e1e1e1;
 }
 
@@ -50,6 +51,7 @@ body {
     display: flex;
     align-items: center;
     padding: .6rem;
+    height: 55px;
 }
 
 .header-left-avatar,
@@ -59,7 +61,7 @@ body {
 }
 
 .header-left-avatar > img {
-    width: 20%;
+    width: 15%;
     border-radius: 50%;
     margin-right: .4rem;
 }
@@ -112,7 +114,7 @@ body {
 }
 
 .chat-search > i {
-    padding: .2rem .9rem;
+    padding: .2rem .7rem;
 }
 
 .chat-search > input {
@@ -124,9 +126,39 @@ body {
     border: 1px solid transparent;
 }
 
+/* Elenco chat */
+.contacts-container {
+    padding: .2rem 0;
+    padding-left: .6rem;
+    background-color: white;
+}
+
+.single-contact {
+    display: flex;
+    align-items: center;
+    margin: .4rem 0;
+} 
+
+.contacts-container img {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.contact-info {
+    padding-left: .5rem;
+}
+
+.contact-info > p:nth-child(2) {
+    color: grey;
+    font-size: .7rem;
+}
+
+
+
 /* PARTE DESTRA */
 .right-app {
     width: 70%;
+    min-width: 200px;
 }
 /* Header */
 .header-right {
@@ -134,5 +166,26 @@ body {
 }
 
 .header-right-avatar > img {
-    width: 20%;
+    width: 10%;
+    border-radius: 50%;
+    margin-right: .4rem;
+}
+
+/* Chat */
+.chat-container {
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/mine.jpg);
+    background-size: 400px;
+    background-repeat: repeat;
+}
+
+.sent-msg {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.received-msg {
+    display: flex;
+    justify-content: flex-start;
 }
