@@ -1,6 +1,11 @@
+console.log('qui');
+
 const app = new Vue (
     {
         el: "#root",
+        mounted() {
+            console.log('ciao');
+        },
         data: {
             contacts: [
                 {

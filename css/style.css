@@ -131,9 +131,11 @@ body {
 
 /* Elenco chat */
 .contacts-container {
+    width: 100%;
     padding: .2rem 0;
     padding-left: .6rem;
     background-color: white;
+    overflow-y: scroll;
 }
 
 .single-contact {
@@ -186,25 +188,31 @@ body {
 }
 
 .messages {
-    min-width: 200px;
-    max-width: 60%;
+    display: flex; 
+    margin: .4rem;
 }
 
-.sent-msg {
-    display: flex;
+.msg--sent {
     justify-content: flex-end;
+}
+
+.msg--received {
+    justify-content: flex-start;
+}
+
+.msg-box {
+    min-width: 250px;
+    max-width: 60%;
+    padding: .6rem;
+    border-radius: 5px;
+}
+
+.msg--sent > .msg-box {
     background-color: #d5f9ba;
 }
 
-.received-msg {
-    display: flex;
-    justify-content: flex-start;
+.msg--received > .msg-box {
     background-color: white;
-}
-
-.sent-msg, .received-msg {
-    padding: .6rem;
-    border-radius: 5px;
 }
 
 /* INVIO MSG */
