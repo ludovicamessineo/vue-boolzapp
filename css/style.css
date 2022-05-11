@@ -7,12 +7,13 @@
 
 /* COMMON */
 body {
+    width: 100%;
     height: 100vh;
     background: linear-gradient(
         to bottom,
-        #009688 0%,
-        #009688 15%,
-        #dadbd3 15%,
+        #009688 0vh,
+        #009688 15vh,
+        #dadbd3 15vh,
         #dadbd3 100%
     );
     overflow: hidden;
@@ -22,6 +23,8 @@ body {
 }
 
 #root {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +37,7 @@ body {
     display: flex;
     background-color: #eaeaea;
     /* Test */
-    height: 500px;
+    height: 90%;
     margin-top: 1rem;
 }
 
@@ -173,19 +176,54 @@ body {
 
 /* Chat */
 .chat-container {
-    height: 100%;
+    height: calc(100% - 95px);
     width: 100%;
     background-image: url(../img/mine.jpg);
     background-size: 400px;
     background-repeat: repeat;
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.messages {
+    min-width: 200px;
+    max-width: 60%;
 }
 
 .sent-msg {
     display: flex;
     justify-content: flex-end;
+    background-color: #d5f9ba;
 }
 
 .received-msg {
     display: flex;
     justify-content: flex-start;
+    background-color: white;
+}
+
+.sent-msg, .received-msg {
+    padding: .6rem;
+    border-radius: 5px;
+}
+
+/* INVIO MSG */
+.new-message {
+    height: 40px;
+    background-color: #f3eeea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-message > input {
+    width: 80%;
+    padding: .5rem;
+    border: 0;
+}
+
+.new-message > i {
+    font-size: 1.2rem;
+    color: #6b7376;
+    padding: 0 1.5rem;
 }

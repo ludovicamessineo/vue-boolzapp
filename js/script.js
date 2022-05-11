@@ -169,4 +169,4 @@ const app = new Vue (
         }
 
     }
-)
+);

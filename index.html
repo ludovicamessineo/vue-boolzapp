@@ -59,10 +59,10 @@
 
                 <!-- ELENCO CHAT -->
                 <div class="contacts-container">
-                    <div class="single-contact" v-for="(item, index) in contacts">
-                        <img :src="'img/avatar' + contacts[0].avatar + '.jpg'" alt="">
-                        <div class="contact-info">
-                            <p>Michele</p>
+                    <div class="single-contact" v-for="element in contacts">
+                        <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
+                        <div class="contact-info" >
+                            <p> {{ element.name }}</p>
                             <p>Ultimo messaggio inviato</p>
                         </div>
                     </div>
@@ -91,14 +91,22 @@
 
                 <!-- CHAT -->
                 <div class="chat-container">
-                    <div class="sent-msg">
-                        <p>Ciao</p>
-                    </div>
-                    <div class="received msg">
-                        <p>Ciao</p>
+                    <div class="messages">
+                        <div class="sent-msg">
+                            <p>Ciao</p>
+                        </div>
+                        <div class="received-msg">
+                            <p>Ciao</p>
+                        </div>
                     </div>
                 </div>
                 <!-- /CHAT -->
+
+                <div class="new-message">
+                    <i class="far fa-smile"></i> 
+                    <input type="text" placeholder="Scrivi un messaggio">
+                    <i class="fas fa-microphone"></i>
+                </div>
 
 
             </div>
