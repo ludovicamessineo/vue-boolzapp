@@ -59,11 +59,11 @@
 
                 <!-- ELENCO CHAT -->
                 <div class="contacts-container">
-                    <div class="single-contact active" v-for="(element,index) in contacts">
+                    <div class="single-contact" v-for="(element,index) in contacts" :class=" {'active' : currentChat === index }" @click="selectContact(index)">
                         <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
                         <div class="contact-info" >
                             <p> {{ element.name }}</p>
-                            <p> {{  }} </p>
+                            <p>Visualizza ultimo messaggio</p>
                         </div>
                     </div>
 
@@ -79,7 +79,10 @@
                 <div class="header-right">
                     <div class="header-right-avatar">
                         <img :src=" 'img/avatar' + contacts[currentChat].avatar + '.jpg' " alt="">
-                        <p> {{ contacts[currentChat].name }} </p>
+                        <div class="header-right-text">
+                            <p> {{ contacts[currentChat].name }} </p>
+                            <p>Ultimo accesso oggi alle 12.00</p>
+                        </div>
                     </div>
                     <div class="header-right-icons">
                         <i class="fas fa-search"></i>
@@ -97,14 +100,15 @@
                     v-for="element in contacts[currentChat].messages">
                         <div class="msg-box">
                             {{ element.message }}
+                            <small>10.30</small>
                         </div>
                     </div>
 
-                    <div class="messages msg--received">
+                    <!-- <div class="messages msg--received">
                         <div class="msg-box">
                             
                         </div>
-                    </div>
+                    </div> -->
                     
                 </div>
                 <!-- /CHAT -->
@@ -112,7 +116,7 @@
                 <!-- NUOVO MESSAGGIO -->
                 <div class="new-message">
                     <i class="far fa-smile"></i> 
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <input @keyup.enter="addMessage" type="text" v-model="newMsg" placeholder="Scrivi un messaggio">
                     <i class="fas fa-microphone"></i>
                 </div>
                 <!-- /NUOVO MESSAGGIO -->

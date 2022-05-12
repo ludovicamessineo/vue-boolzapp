@@ -169,15 +169,36 @@ const app = new Vue (
                 }
             ],
             currentChat: 0,
+            newMsg: ''
             
         },
         methods: {
+            selectContact: function(index) {
+                this.currentChat = index;
+            },
+
             addMessage: function() {
-                const newMsg = {
-                    
-                }
-            }
+                const newMsg = this.contacts[this.currentChat];
+                newMsg.messages.push ({
+                    date: "",
+                    message: this.newMsg,
+                    status: "sent"
+                })
+                this.newMsg = ""
+                setTimeout(this.addReply, 1000)
+            },
+
+            addReply: function() {
+                const newMsg = this.contacts[this.currentChat];
+                newMsg.messages.push({
+                    date: "",
+                    message: "Ok",
+                    status: "received"
+                })
+            },
+    
         },
 
     }
 );
+

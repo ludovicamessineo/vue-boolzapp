@@ -157,7 +157,8 @@ body {
     padding-left: .5rem;
 }
 
-.contact-info > p:nth-child(2) {
+.contact-info > p:nth-child(2),
+.header-right-text > p:nth-child(2)  {
     color: grey;
     font-size: .7rem;
 }
@@ -182,6 +183,7 @@ body {
     border-radius: 50%;
     margin-right: .4rem;
 }
+
 
 /* Chat */
 .chat-container {
@@ -212,6 +214,15 @@ body {
     max-width: 60%;
     padding: .6rem;
     border-radius: 5px;
+    position: relative;
+}
+
+.msg-box > small {
+    position: absolute;
+    right: .2rem;
+    bottom: .2rem;
+    color: grey;
+    font-size: .6rem;
 }
 
 .msg--sent > .msg-box {
