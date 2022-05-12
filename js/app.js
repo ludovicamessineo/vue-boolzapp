@@ -1,5 +1,3 @@
-console.log('qui');
-
 const app = new Vue (
     {
         el: "#root",
@@ -169,9 +167,17 @@ const app = new Vue (
                         }
                     ],
                 }
-            ]
+            ],
+            currentChat: 0,
             
-        }
+        },
+        methods: {
+            addMessage: function() {
+                const newMsg = {
+                    
+                }
+            }
+        },
 
     }
 );
