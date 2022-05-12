@@ -53,13 +53,13 @@
     
                 <div class="chat-search">
                     <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="search" @keyup="filterSearch">
                 </div>
                 <!-- /NOTIFICHE E RICERCA -->
 
                 <!-- ELENCO CHAT -->
                 <div class="contacts-container">
-                    <div class="single-contact" v-for="(element,index) in contacts" :class=" {'active' : currentChat === index }" @click="selectContact(index)">
+                    <div class="single-contact" v-for="(element,index) in contacts" :class=" {'active' : currentChat === index }" @click="selectContact(index)" v-if="element.visible">
                         <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
                         <div class="contact-info" >
                             <p> {{ element.name }}</p>

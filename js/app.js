@@ -169,7 +169,8 @@ const app = new Vue (
                 }
             ],
             currentChat: 0,
-            newMsg: ''
+            newMsg: '',
+            search: ''
             
         },
         methods: {
@@ -196,6 +197,16 @@ const app = new Vue (
                     status: "received"
                 })
             },
+
+            filterSearch: function() {
+                this.contacts.forEach(element => {
+                    if (element.name.includes(this.search)) {
+                        element.visible = true;
+                    } else {
+                        element.visible = false;
+                    }
+                });
+            }
     
         },
 
